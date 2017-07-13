@@ -280,6 +280,7 @@
                     <span class="bp">self</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
                     <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
+        <span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s1">&#39;Parsers skipped </span><span class="si">%d</span><span class="s1"> rows&#39;</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span><span class="n">skipped</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gen_stats</span><span class="p">()</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span></div>

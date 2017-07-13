@@ -95,6 +95,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">UI Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#useful-examples">Useful Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#launching-caesar">Launching Caesar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-config-files">Custom Config Files</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#interacting-with-swap">Interacting with SWAP</a></li>
@@ -225,6 +226,34 @@ points to a python version &gt;=3.4</p>
 <div class="section" id="launching-caesar">
 <h2>Launching Caesar<a class="headerlink" href="#launching-caesar" title="Permalink to this headline">¶</a></h2>
 <p>Some examples to launch caesar</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Make sure to specify a config file to override default settings when running
+online swap. This can by adding the <cite>–config-file</cite> option, e.g.:</p>
+<blockquote class="last">
+<div><code class="docutils literal"><span class="pre">run_swap</span> <span class="pre">--config-file</span> <span class="pre">/path/to/config</span> <span class="pre">caesar</span> <span class="pre">...</span></code></div></blockquote>
+</div>
+<dl class="docutils">
+<dt>Register SWAP as an extractor/reducer on caesar:</dt>
+<dd><code class="docutils literal"><span class="pre">run_swap</span> <span class="pre">caesar</span> <span class="pre">--login</span> <span class="pre">--register</span></code></dd>
+<dt>Unregister SWAP as an extractor/reducer on caesar:</dt>
+<dd><code class="docutils literal"><span class="pre">run_swap</span> <span class="pre">caesar</span> <span class="pre">--login</span> <span class="pre">--unregister</span></code></dd>
+<dt>Run SWAP with caesar:</dt>
+<dd><code class="docutils literal"><span class="pre">run_swap</span> <span class="pre">caesar</span> <span class="pre">--login</span> <span class="pre">--run</span></code></dd>
+</dl>
+</div>
+<div class="section" id="custom-config-files">
+<h2>Custom Config Files<a class="headerlink" href="#custom-config-files" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to specify a custom config file to override default
+config options. Make a copy of <code class="docutils literal"><span class="pre">hco-experiments/swap/swap/config/config.default.py</span></code>
+and override the desired options.</p>
+<p>To override options to be loaded on every run, save your new config file to
+<code class="docutils literal"><span class="pre">hco-experiments/swap/swap/config/config.py`.</span> <span class="pre">To</span> <span class="pre">specify</span> <span class="pre">it</span> <span class="pre">at</span> <span class="pre">runtime,</span> <span class="pre">add</span> <span class="pre">the</span>
+<span class="pre">``--config-file</span></code> option.</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd><code class="docutils literal"><span class="pre">run_swap</span> <span class="pre">--config-file</span> <span class="pre">/path/to/config</span></code></dd>
+</dl>
 </div>
 </div>
 <div class="section" id="interacting-with-swap">
