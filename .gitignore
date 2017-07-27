@@ -128,6 +128,7 @@ static/
 # Pylint config
 .pylintrc
 
-# Local configuration overrides
+# SWAP specific stuff
+swap/logs/
 swap/swap/config/local_config.py
 swap/swap/config/config.py
